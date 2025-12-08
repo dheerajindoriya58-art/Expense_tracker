@@ -40,26 +40,28 @@ export default function Expense() {
 
             <h3>Balance: ₹{balance}</h3>
 
-            <input
-                type="text"
-                placeholder="Enter Title"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-            />
+            <div className="input-field">
+                <input
+                    type="text"
+                    placeholder="Enter Title"
+                    value={text}
+                    onChange={(e) => setText(e.target.value)} />
 
-            <input
-                type="number"
-                placeholder="Enter Amount"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-            />
+                <input
+                    type="number"
+                    placeholder="Enter Amount"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}/>
 
-            <button onClick={addTransaction}>Add</button>
+                <button onClick={addTransaction} className='add-btn'>Add</button>
+
+            </div>
 
             <ul>
                 {transactions.map((item) => (
                     <li key={item.id}>
-                        {item.text} - ₹{item.amount}
+                        <p>{item.text}</p>
+                        <p>₹{item.amount}</p>
                         <button onClick={() => deleteTransaction(item.id)}>X</button>
                     </li>
                 ))}

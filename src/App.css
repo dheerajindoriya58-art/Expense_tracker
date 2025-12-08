@@ -1,17 +1,83 @@
-.container {
-  width: 300px;
-  margin: auto;
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body{
+  font-family: sans-serif;
+}
+
+.container {
+  width: 340px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.263);
+  padding: 20px;
+  margin-top: 50px;
+}
+
+h3{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 input {
   width: 100%;
   margin: 5px 0;
   padding: 5px;
 }
 
-button {
+.add-btn {
   padding: 6px 10px;
+  width: 300px;
   margin-top: 10px;
   cursor: pointer;
+  background-color: navy;
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all .3s ease-in;
+}
+
+.add-btn:hover{
+  background-color: transparent;
+  border: 2px black solid;
+  color: #000;
+}
+
+button{
+   padding: 6px 10px;
+  width: 120px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: rgb(0, 90, 5);
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 8px;
+}
+
+li{
+  list-style: none;
+}
+
+p{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+ul li{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px;
+  margin-top: 12px;
+  background-color: rgba(0, 0, 0, 0.153);
 }
